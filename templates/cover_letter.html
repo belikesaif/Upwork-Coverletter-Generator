@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cover Letter Generator (Upwork)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Upwork Cover Letter Generator</h1>
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+        <label for="user_name">Your Name:</label>
+        <input type="text" id="user_name" name="user_name" required><br>
+
+        <label for="user_info">Upload Your Information:</label>
+        <input type="file" id="user_info" name="user_info" accept=".txt" required><br>
+
+        <label for="project_title">Project Title:</label>
+        <input type="text" id="project_title" name="project_title" required><br>
+
+        <label for="project_description">Project Description:</label>
+        <textarea id="project_description" name="project_description" rows="5" required></textarea><br>
+
+        <label for="relevant_skills">Your Relevant Skills:</label>
+        <input type="text" id="relevant_skills" name="relevant_skills" required value="Adaptability, Collaboration, Communication, Creativity, Leadership, Algorithms, TensorFlow, PyTorch, OpenCV, NumPy, Pandas, Python, C++, PHP, SQL, React JS, Problem-Solving"><br>
+
+        <input type="submit" value="Generate Cover Letter">
+    </form>
+
+    {% if cover_letter %}
+        <div class="cover-letter">
+            <h2>Cover Letter</h2>
+            {{ cover_letter | safe }}
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+    {% endif %}
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.querySelector('.cover-letter');
+            var tempInput = document.createElement("textarea");
+            tempInput.value = copyText.innerText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Cover letter copied to clipboard!");
+        }
+
+        // Reset form fields on page reload
+        window.onload = function() {
+            document.getElementById("cover_letter_form").reset();
+            document.getElementById("cover_letter").innerHTML = '';
+        };
+    </script>
+</body>
+</html>

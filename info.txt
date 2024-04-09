@@ -1,0 +1,18 @@
+Name: Saif-Ur-Rehman
+Gender: Male
+Age: 21
+
+I'm Saif, a final year Bachelor's student majoring in Computer Science. I'm passionate about AI/ML with prior experience in digital marketing & wordpress web development. I'm not only passionate about my field of interest but I've also catered projects related to my field, my work is available on github and kaggle. Some of my projects, includes an Semantic Textual Relatedness between two sentences in Spanish Language using NLP, other than that I've skills in web scraping as well as I also have a grip upon computer vision using OpenCV library, I've experience working with C++, C, PHP, React JS but out of all these, python is my strong suit, however I'm quite adaptabile and easy to learn kind of person. Mainly I'm looking for work related to Natural Language Processing, Machine Learning & Artificial Intelligence.
+
+My Skills:
+- Adaptability
+- Collaboration
+- Communication
+- Creativity
+- Leadership
+
+Technical Skills:
+- Algorithms (All Basic AI/ML Algorithms)
+- Frameworks (Tensorflow, Pytorch, OpenCv, Numpy, Pandas)
+- Programming ( Python, C++, PHP, SQL, React JS)
+- Problem-Solving
